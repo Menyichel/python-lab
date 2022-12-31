@@ -8,7 +8,7 @@ printt()
    line
 '''
 """this comment 
-   is also possible""""
+   is also possible"""
 #key words
 
 #variable
@@ -23,7 +23,7 @@ print(type(x))#print data type of "x"
 str1="Hello"
 print(len(str1))
 
-recieving input
+#recieving input
 x=(input("Enter your name?"))
 print("Hello "+x)
 g=int((input("Enter first number?")))
@@ -78,11 +78,11 @@ else:
     print(str(d)+" nothing")
 
 m= int(4)
-match m :
-    case 2: 
-        print("number 2.")
-    case _:
-        print("Other number")
+# match m :
+#     case 2: 
+#         print("number 2.")
+#     case _:
+#         print("Other number")
 
 #ternary operator
 age=22
