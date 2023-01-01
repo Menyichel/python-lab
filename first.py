@@ -23,6 +23,8 @@ print(type(x))#print data type of "x"
 str1="Hello"
 print(len(str1))
 
+print (complex(57))#casting to complex number
+
 #recieving input
 x=(input("Enter your name?"))
 print("Hello "+x)
@@ -32,11 +34,20 @@ print("The sum is "+str(g+h))
 
 print(print("c"))
 
-#string format 
+#string format {}placeeholder
 name="Menyichel"
 age=23
 gpa=3.93344337
 print('My name is {:s} and {:d} years old and gpa {:6.2f}.'.format(name, age, gpa))
+age1 = 22
+txt = "My name is Menee, and I am {}"
+print(txt.format(age1))
+
+quantity = 3
+itemnum = 567
+price = 70
+order = "I want to pay {2} birr for {0} pieces of item {1}."
+print(order.format(quantity, itemnum, price))
 
 #access strings from string
 name1="Dawit"
@@ -58,6 +69,7 @@ print(oct(65))
 print(hex(65))
 print(str(65))
 
+
 #conditional if-else
 d=int(input("Enter a number: "))
 if d%2==0:
@@ -77,6 +89,11 @@ elif d%3==0 and d%5==0:
 else:
     print(str(d)+" nothing")
 
+n1 = 100
+n2 = 100
+
+print("N1") if n1 > n2 else print("=") if n1 == n2 else print("N2")
+
 m= int(4)
 # match m :
 #     case 2: 
@@ -95,3 +112,6 @@ for jj in j:
     print(jj)
 for i in range(0,10,2):
   print(i)
+
+#exponent
+print(3**3)
