@@ -15,6 +15,18 @@ def word_found(text):
     for key in list(d.keys()):
         print(key, end=",")
 
+def wordOccurence(text):
+    # Compute word frequency and display in decreasing order
+    word_counts = {}
+    for word in text.split():
+        if word in word_counts:
+            word_counts[word] += 1
+        else:
+            word_counts[word] = 1
+    sorted_words = sorted(word_counts.items(), key=lambda x: x[1], reverse=True)
+    for word, count in sorted_words:
+        print(f"{word}: {count}")
+
 def mainF():
     # Read the text file
     with open("text.txt", "r", encoding='utf-8') as f:
@@ -31,6 +43,7 @@ def mainF():
 
     # Finding word frequency
     print("\nWord frequency:")
+    wordOccurence(text)
 
     # Finding character frequency
     print("\nCharacter frequency:")
