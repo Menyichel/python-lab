@@ -1,11 +1,16 @@
 import string
 
+def remove_punctuation(text):
+    # Remove all punctuation from the text
+    text = text.translate(text.maketrans("", "", string.punctuation))
+    return text
 
 def mainF():
     # Read the text file
     with open("text.txt", "r", encoding='utf-8') as f:
         text = f.read()
-
+    text = remove_punctuation(text)
+    
     lines = text.split("\n")
     words = text.split()
 
