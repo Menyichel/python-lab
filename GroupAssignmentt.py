@@ -27,6 +27,20 @@ def wordOccurence(text):
     for word, count in sorted_words:
         print(f"{word}: {count}")
 
+def characterOccurence(text):
+    # Compute character frequency and display the first five most frequent
+    char_counts = {}
+    for char in text:
+        if char==" ":
+            continue
+        if char in char_counts:
+            char_counts[char] += 1
+        else:
+            char_counts[char] = 1
+    sorted_chars = sorted(char_counts.items(), key=lambda x: x[1], reverse=True)
+    for i in range(5):
+        print(f"{sorted_chars[i][0]}: {sorted_chars[i][1]}")
+
 def mainF():
     # Read the text file
     with open("text.txt", "r", encoding='utf-8') as f:
@@ -47,6 +61,7 @@ def mainF():
 
     # Finding character frequency
     print("\nCharacter frequency:")
+    characterOccurence(text)
 
     # Statstical informations
     print(f"\nTotal number of lines: {len(lines)}")
