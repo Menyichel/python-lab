@@ -5,17 +5,17 @@ def ስርአት_ነጥብ_ማስወገጃ(ፋይል):
     ፋይል = ፋይል.translate(ፋይል.maketrans("", "", string.punctuation))
     return ፋይል
     
-#method to find words from the text file
-def word_found(text):
-    
-    d = {}
-    for word in text.split():
-        if word in d:
-           d[word] += 1
+def ቃሎች_መዘርዘሪያ(ፋይል):
+    # Compute identification of words and display them
+    ዲ = {}
+    for ቃል in ፋይል.split():
+        if ቃል in ዲ:
+           ዲ[ቃል] += 1
         else:
-           d[word] = 1
-    for key in list(d.keys()):
+           ዲ[ቃል] = 1
+    for key in list(ዲ.keys()):
         print(key, end=",")
+        
 # find word frequency and display in decreasing order
 def wordOccurence(text):
     word_counts = {}
