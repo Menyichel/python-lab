@@ -4,6 +4,16 @@ def remove_punctuation(text):
     # Remove all punctuation from the text
     text = text.translate(text.maketrans("", "", string.punctuation))
     return text
+def word_found(text):
+    
+    d = {}
+    for word in text.split():
+        if word in d:
+           d[word] += 1
+        else:
+           d[word] = 1
+    for key in list(d.keys()):
+        print(key, end=",")
 
 def mainF():
     # Read the text file
@@ -17,6 +27,7 @@ def mainF():
     # Identifying words
     print("\n---------------------------------")
     print("Word found:")
+    word_found(text)
 
     # Finding word frequency
     print("\nWord frequency:")
