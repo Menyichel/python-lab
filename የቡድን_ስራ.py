@@ -1,9 +1,9 @@
 import string
 
-def remove_punctuation(text):
+def ስርአት_ነጥብ_ማስወገጃ(ፋይል):
     # Remove all punctuation from the text
-    text = text.translate(text.maketrans("", "", string.punctuation))
-    return text
+    ፋይል = ፋይል.translate(ፋይል.maketrans("", "", string.punctuation))
+    return ፋይል
     
 #method to find words from the text file
 def word_found(text):
