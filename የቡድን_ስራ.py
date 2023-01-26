@@ -42,32 +42,31 @@ def characterOccurence(text):
     for i in range(5):
         print(f"{sorted_chars[i][0]}: {sorted_chars[i][1]}")
 
-def mainF():
+def ዋና():
     # Read the text file
-    with open("text.txt", "r", encoding='utf-8') as f:
-        text = f.read()
-    text = remove_punctuation(text)
-    
-    lines = text.split("\n")
-    words = text.split()
+    with open("text.txt", "r", encoding='utf-8') as ፋ:
+        ፋይል = ፋ.read()
+    ፋይል = ስርአት_ነጥብ_ማስወገጃ(ፋይል)
 
-    # Identifying words
-    print("\n---------------------------------")
-    print("Word found:")
-    word_found(text)
+    # Output statistical information
+    መስመር = ፋይል.split("\n")
+    ቃላት = ፋይል.split()
 
-    # Finding word frequency
-    print("\nWord frequency:")
-    wordOccurence(text)
+    # Compute word word identified
+    print("\nየዚህ ፋይል ቃላት:")
+    ቃሎች_መዘርዘሪያ(ፋይል)
 
-    # Finding character frequency
-    print("\nCharacter frequency:")
-    characterOccurence(text)
+    # Compute word frequency
+    print("\n\nየቃላት ድግግሞሽ:")
+    ቃላት_ድግግሞሽ_መቁጠሪያ(ፋይል)
 
-    # Statstical informations
-    print(f"\nTotal number of lines: {len(lines)}")
-    print(f"Total number of words: {len(words)}")
-    print(f"Total number of characters: {len(text)}")
-    print("-----------------------------------\n")
+    # Compute character frequency
+    print("\nየሆሄያት ድግግሞሽ:")
+    የፊደላት_ድግግሞሽ_መቁጠሪያ(ፋይል)
 
-mainF()
+    # Statstical data
+    print(f"\nየዚህ ፋይል የመስመር ብዛት: {len(መስመር)}")
+    print(f"የዚህ ፋይል የቃላት ብዛት: {len(ቃላት)}")
+    print(f"የዚህ ፋይል የሆሄያት ብዛት: {len(ፋይል)}\n")
+
+ዋና()
