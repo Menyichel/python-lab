@@ -56,7 +56,7 @@ def mainF():
     word_found(text)
 
     # Finding word frequency
-    print("\nWord frequency:")
+    print("\n\nWord frequency:")
     wordOccurence(text)
 
     # Finding character frequency
