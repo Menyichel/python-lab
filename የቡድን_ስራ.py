@@ -16,17 +16,17 @@ def ቃሎች_መዘርዘሪያ(ፋይል):
     for key in list(ዲ.keys()):
         print(key, end=",")
         
-# find word frequency and display in decreasing order
-def wordOccurence(text):
-    word_counts = {}
-    for word in text.split():
-        if word in word_counts:
-            word_counts[word] += 1
+def ቃላት_ድግግሞሽ_መቁጠሪያ(ፋይል):
+    # Compute word frequency and display in decreasing order
+    ቃል_ማጠራቀሚያ = {}
+    for ቃል in ፋይል.split():
+        if ቃል in ቃል_ማጠራቀሚያ:
+            ቃል_ማጠራቀሚያ[ቃል] += 1
         else:
-            word_counts[word] = 1
-    sorted_words = sorted(word_counts.items(), key=lambda x: x[1], reverse=True)
-    for word, count in sorted_words:
-        print(f"{word}: {count}")
+            ቃል_ማጠራቀሚያ[ቃል] = 1
+    sorted_words = sorted(ቃል_ማጠራቀሚያ.items(), key=lambda x: x[1], reverse=True)
+    for ቃል, ብዛት in sorted_words:
+        print(f"{ቃል}: {ብዛት}")
 
 # Compute character frequency and display the first five most frequently occured characters
 def characterOccurence(text):
