@@ -28,17 +28,17 @@ def ቃላት_ድግግሞሽ_መቁጠሪያ(ፋይል):
     for ቃል, ብዛት in sorted_words:
         print(f"{ቃል}: {ብዛት}")
 
-# Compute character frequency and display the first five most frequently occured characters
-def characterOccurence(text):
-    char_counts = {}
-    for char in text:
-        if char==" ":
+def የፊደላት_ድግግሞሽ_መቁጠሪያ(ፋይል):
+    # Compute character frequency and display the first five most frequent
+    ሆሄ_መቁጠሪያ = {}
+    for ሆሄ in ፋይል:
+        if ሆሄ==" ":
             continue
-        if char in char_counts:
-            char_counts[char] += 1
+        if ሆሄ in ሆሄ_መቁጠሪያ:
+            ሆሄ_መቁጠሪያ[ሆሄ] += 1
         else:
-            char_counts[char] = 1
-    sorted_chars = sorted(char_counts.items(), key=lambda x: x[1], reverse=True)
+            ሆሄ_መቁጠሪያ[ሆሄ] = 1
+    sorted_chars = sorted(ሆሄ_መቁጠሪያ.items(), key=lambda x: x[1], reverse=True)
     for i in range(5):
         print(f"{sorted_chars[i][0]}: {sorted_chars[i][1]}")
 
