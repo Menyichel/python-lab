@@ -1,44 +1,44 @@
 import string
 
-def remove_punctuation(text):
+def ስርአት_ነጥብ_ማስወገጃ(ፋይል):
     # Remove all punctuation from the text
-    text = text.translate(text.maketrans("", "", string.punctuation))
-    return text
+    ፋይል = ፋይል.translate(ፋይል.maketrans("", "", string.punctuation))
+    return ፋይል
     
-#method to find words from the text file
-def word_found(text):
-    
-    d = {}
-    for word in text.split():
-        if word in d:
-           d[word] += 1
+def ቃሎች_መዘርዘሪያ(ፋይል):
+    # Compute identification of words and display them
+    ዲ = {}
+    for ቃል in ፋይል.split():
+        if ቃል in ዲ:
+           ዲ[ቃል] += 1
         else:
-           d[word] = 1
-    for key in list(d.keys()):
+           ዲ[ቃል] = 1
+    for key in list(ዲ.keys()):
         print(key, end=",")
-# find word frequency and display in decreasing order
-def wordOccurence(text):
-    word_counts = {}
-    for word in text.split():
-        if word in word_counts:
-            word_counts[word] += 1
+        
+def ቃላት_ድግግሞሽ_መቁጠሪያ(ፋይል):
+    # Compute word frequency and display in decreasing order
+    ቃል_ማጠራቀሚያ = {}
+    for ቃል in ፋይል.split():
+        if ቃል in ቃል_ማጠራቀሚያ:
+            ቃል_ማጠራቀሚያ[ቃል] += 1
         else:
-            word_counts[word] = 1
-    sorted_words = sorted(word_counts.items(), key=lambda x: x[1], reverse=True)
-    for word, count in sorted_words:
-        print(f"{word}: {count}")
+            ቃል_ማጠራቀሚያ[ቃል] = 1
+    sorted_words = sorted(ቃል_ማጠራቀሚያ.items(), key=lambda x: x[1], reverse=True)
+    for ቃል, ብዛት in sorted_words:
+        print(f"{ቃል}: {ብዛት}")
 
-# Compute character frequency and display the first five most frequently occured characters
-def characterOccurence(text):
-    char_counts = {}
-    for char in text:
-        if char==" ":
+def የፊደላት_ድግግሞሽ_መቁጠሪያ(ፋይል):
+    # Compute character frequency and display the first five most frequent
+    ሆሄ_መቁጠሪያ = {}
+    for ሆሄ in ፋይል:
+        if ሆሄ==" ":
             continue
-        if char in char_counts:
-            char_counts[char] += 1
+        if ሆሄ in ሆሄ_መቁጠሪያ:
+            ሆሄ_መቁጠሪያ[ሆሄ] += 1
         else:
-            char_counts[char] = 1
-    sorted_chars = sorted(char_counts.items(), key=lambda x: x[1], reverse=True)
+            ሆሄ_መቁጠሪያ[ሆሄ] = 1
+    sorted_chars = sorted(ሆሄ_መቁጠሪያ.items(), key=lambda x: x[1], reverse=True)
     for i in range(5):
         print(f"{sorted_chars[i][0]}: {sorted_chars[i][1]}")
 
